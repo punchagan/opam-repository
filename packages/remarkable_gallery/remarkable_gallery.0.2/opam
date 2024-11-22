@@ -44,7 +44,7 @@ pin-depends: [
 url {
   src: "https://github.com/punchagan/opam-ci-check"
   checksum: [
-    "md5=b77a6d0b86a5cbeef972bd4b5c1b1190"
-    "sha512=b256432570161d24575d97ef8939b8c41d08d2553f7000ce3bfbfd25ccce1ecdf4a5b6e8850394aa64fb16d1a7211d0fe58fc5943588073e16d977095d562a6f"
+    "md5=f2102136745357d7aea495206cccf4d7"
+    "sha512=c58f0e6929941f32d927623af0d2f381bf3f5561309d18373205cf03f61ff1f41a55e1aeba77215f6758522c1c82a037bdbe28af986c775cd2f7a9e719ffbd95"
   ]
 }
