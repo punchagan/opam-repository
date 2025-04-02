@@ -87,6 +87,11 @@ jobs:
           $outputJson | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
           "@@@" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          detached: true
+
       - name: Install packages
         env:
           ALL_CHANGED_PACKAGES: ${{ steps.changed-packages.outputs.data }}
@@ -94,6 +99,7 @@ jobs:
           $pkgs = $env:ALL_CHANGED_PACKAGES | ConvertFrom-Json
           $failed = $false
           opam update
+          opam list
           Foreach ($pkg in $pkgs) {
             Write-Host "::group::Testing `e[1;34m$pkg`e[0m"
             opam install --color=always --confirm-level=unsafe-yes "$pkg"
