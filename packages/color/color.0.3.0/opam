@@ -34,7 +34,7 @@ build: [
 ]
 dev-repo: "git+https://github.com/anuragsoni/color.git"
 
-url {
+url: {
   src: "https://github.com/anuragsoni/color/archive/refs/tags/0.3.0.tar.gz"
   checksum: [
     "md5=8bb06d9bb169c29f17699fb93809db94"
