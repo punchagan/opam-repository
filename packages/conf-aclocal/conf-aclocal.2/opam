@@ -4,7 +4,10 @@ authors: "https://git.savannah.gnu.org/cgit/automake.git/tree/AUTHORS"
 homepage: "http://www.gnu.org/software/automake/"
 bug-reports: "https://github.com/ocaml/opam-repository/issues"
 license: "GPL-1.0-or-later"
-build: ["aclocal" "--version"]
+build: [
+  ["sh" "-exc" "aclocal --version"] {os = "win32" & os-distribution != "cygwinports"}
+  [ "aclocal" "--version" ] {os != "win32" | os-distribution = "cygwinports"}
+]
 depends: ["conf-automake"]
 synopsis: "Virtual package relying on aclocal"
 description:
