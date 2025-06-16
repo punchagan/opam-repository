@@ -3,7 +3,10 @@ maintainer: "anil@recoil.org"
 homepage: "http://gnu.org/software/emacs"
 bug-reports: "https://github.com/ocaml/opam-repository/issues"
 license: "GPL-1.0-or-later"
-build: ["emacs" "--version"]
+build: [
+  ["sh" "-exc" "emacs --version"] {os = "win32" & os-distribution != "cygwinports"}
+  [ "emacs" "--version" ] {os != "win32" | os-distribution = "cygwinports"}
+]
 depexts: [
   ["emacs-nox"] {os-family = "debian" & os-distribution != "ubuntu"}
   ["emacs"] {os-distribution = "ubuntu"}
@@ -17,6 +20,7 @@ depexts: [
   ["emacs"] {os-distribution = "arch"}
   ["emacs"] {os = "freebsd"}
   ["emacs"] {os-distribution = "homebrew" & os = "macos"}
+  ["emacs"] {os-distribution = "cygwin"}
 ]
 synopsis: "Virtual package to install the Emacs editor"
 description:
