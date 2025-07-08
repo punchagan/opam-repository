@@ -25,6 +25,7 @@ depends: [
   "opam-file-format" {>= "2.1.4"}
   "re" {>= "1.9.0"}
   "dune" {>= "2.8.0"}
+  "opam-ci-check-lint" {with-doc}
 ]
 build: [
   ["./configure" "--disable-checks" "--prefix" prefix]
