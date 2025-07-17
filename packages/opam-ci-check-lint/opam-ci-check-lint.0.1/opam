@@ -19,7 +19,6 @@ bug-reports: "https://github.com/ocurrent/opam-repo-ci/issues"
 depends: [
   "ocaml" {>= "4.14.0"}
   "dune" {>= "3.16"}
-  "sexplib"
   "opam-state" {>= "2.3.0~alpha1"}
   "opam-format" {>= "2.3.0~alpha1"}
   "odoc" {with-doc}
@@ -40,10 +39,9 @@ build: [
 ]
 dev-repo: "git+https://github.com/ocurrent/opam-repo-ci.git"
 url {
-  src:
-    "https://github.com/ocurrent/opam-repo-ci/archive/12810c8cc0b9a02e7b22f660387b76c6e70aa685.tar.gz"
+  src: "https://github.com/ocurrent/opam-repo-ci"
   checksum: [
-    "md5=ecf9bfdbe72256fbb3f66b359dc277ef"
-    "sha512=f8984939d945184ed44ba694b4f8936991c220d5fc4d57120d2f70d6da6972bf441e2bb174e36181a521589d8db5829a7521caa366b2a3b13f3b2501c057aee6"
+    "md5=2f98072a205f873486fd596679de8dbe"
+    "sha512=266bef6b027a6977a9b56bf8979dcc4d6e99308497e180d2ceedc14bc2131c38b1b801f415b72a89aadf1dd4b1392935fef090f384b18ea956bbef153b9e62ec"
   ]
 }
